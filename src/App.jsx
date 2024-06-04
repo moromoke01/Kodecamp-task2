@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import TimerInput from './components/TimerInput';
 import TimerDisplay from './components/TimerDisplay';
 import TimerControls from './components/TimerControls';
+import './App.css'
 
 function App() {
   const [initialTime, setInitialTime] = useState(0);
@@ -41,6 +42,8 @@ function App() {
 
   return (
     <div className="App">
+
+      <div className='timer-container'>
       <TimerInput onSetTime={handleSetTime} />
       <TimerDisplay remainingTime={remainingTime} />
       <TimerControls 
@@ -49,6 +52,7 @@ function App() {
         onReset={handleReset} 
         isRunning={isRunning}
       />
+      </div>
     </div>
   );
 }

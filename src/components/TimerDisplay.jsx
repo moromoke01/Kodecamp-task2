@@ -3,7 +3,7 @@ import React from 'react';
 
 const TimerDisplay = ({ remainingTime }) => {
   return (
-    <div>
+    <div className='counter-box'>
       <h1>{remainingTime} seconds</h1>
     </div>
   );
